@@ -88,11 +88,14 @@ gridButton.addEventListener("click", () => {
 function checker(elementId) {
     let gridColumns = document.querySelectorAll(".gridCol");
     gridColumns.forEach((element) => {
-        if (draw && !erase) {
-            element.style.backgroundColor = colorButton.value;
-        } else if (draw && erase){
-            element.style.backgroundColor = "transparent";
+        if (elementId == element.id) {
+            if (draw && !erase) {
+                element.style.backgroundColor = colorButton.value;
+            } else if (draw && erase) {
+                element.style.backgroundColor = "transparent";
+            }
         }
+        
     });
 }
 
